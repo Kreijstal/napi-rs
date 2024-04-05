@@ -780,7 +780,7 @@ pub use napi8::*;
 #[cfg(feature = "napi9")]
 pub use napi9::*;
 
-#[cfg(any(windows, feature = "dyn-symbols"))]
+#[cfg(any(msvc, feature = "dyn-symbols"))]
 pub(super) unsafe fn load_all() -> Result<libloading::Library, libloading::Error> {
   #[cfg(windows)]
   let host = libloading::os::windows::Library::this()?.into();
