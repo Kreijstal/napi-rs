@@ -188,7 +188,7 @@ jobs:
   build-and-test-msys2:
     strategy:
       matrix:
-        sys: [MINGW64, UCRT64]
+        sys: [MINGW64, UCRT64,CLANG64]
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v4
